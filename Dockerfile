@@ -15,7 +15,6 @@ WORKDIR /app
 
 COPY --from=builder --chown=node:node /builder/next.config.js ./
 COPY --from=builder --chown=node:node /builder/public ./public
-COPY --from=builder --chown=node:node /builder/pages/notes ./pages/notes
 COPY --from=builder --chown=node:node /builder/.next/standalone ./
 COPY --from=builder --chown=node:node /builder/.next/static ./.next/static
 
